@@ -56,7 +56,7 @@
                     <a href="#home" class="hover:text-blue-600 transition">Home</a>
                     <a href="#about" class="hover:text-blue-600 transition">Principal</a>
                     <a href="#academics" class="hover:text-blue-600 transition">Classes</a>
-                    <a href="#campus" class="hover:text-blue-600 transition">Campus Photo</a>
+                    <a href="#campus" class="hover:text-blue-600 transition">Campus Gallery</a>
                     <a href="#admission" class="hover:text-blue-600 transition">Contact</a>
                 </div>
                 <a href="#admission" class="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white px-5 py-2.5 rounded-full font-bold text-sm shadow-md transition transform hover:scale-105">
@@ -66,19 +66,25 @@
         </div>
     </nav>
 
-    <!-- 3. BRIGHT HERO SECTION WITH SCHOOL PHOTO -->
-    <section id="home" class="bg-gradient-to-br from-blue-600 via-blue-500 to-sky-400 text-white py-14 md:py-20 px-4 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <!-- 3. HERO SECTION WITH SCHOOL BUILDING PHOTO BACKGROUND -->
+    <section id="home" class="relative text-white py-16 md:py-24 px-4 overflow-hidden bg-slate-900">
+        <!-- Background School Image with Dark Gradient Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="School Background" class="w-full h-full object-cover opacity-35 scale-105">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-blue-900/80 to-sky-900/70"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative z-10">
             <!-- Left Text -->
             <div class="space-y-6">
-                <div class="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/40 text-yellow-200 text-sm font-bold shadow-sm">
+                <div class="inline-flex items-center space-x-2 bg-white/15 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/30 text-yellow-300 text-sm font-bold shadow-sm">
                     <i class="fas fa-star text-yellow-300"></i>
                     <span>Best Primary School in Barahat, Banka</span>
                 </div>
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight drop-shadow-sm">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight drop-shadow-md">
                     Welcome to <span class="text-yellow-300 underline decoration-wavy decoration-orange-400">Sir Newton</span> Public School
                 </h1>
-                <p class="text-blue-50 text-lg leading-relaxed font-medium">
+                <p class="text-blue-100 text-lg leading-relaxed font-medium">
                     Giving your child the brightest start from <strong>Nursery to Class 6</strong> with smart classes, English speaking environment, and caring teachers in Barahat (813103).
                 </p>
                 <div class="flex flex-wrap gap-4 pt-2">
@@ -86,44 +92,42 @@
                         <span>Apply for Admission</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="tel:+918809499469" class="bg-white text-blue-700 hover:bg-blue-50 font-extrabold px-7 py-4 rounded-2xl shadow-xl transition flex items-center space-x-2">
-                        <i class="fas fa-phone-alt text-orange-500"></i>
+                    <a href="tel:+918809499469" class="bg-white/20 backdrop-blur-md border border-white/40 text-white hover:bg-white/30 font-extrabold px-7 py-4 rounded-2xl shadow-xl transition flex items-center space-x-2">
+                        <i class="fas fa-phone-alt text-yellow-300"></i>
                         <span>+91 88094 99469</span>
                     </a>
                 </div>
             </div>
 
-            <!-- Right: SCHOOL BUILDING PHOTO FRAME -->
+            <!-- Right: GRAND SCHOOL BUILDING CARD -->
             <div class="relative">
-                <div class="bg-white p-3 rounded-3xl shadow-2xl transform md:rotate-1 hover:rotate-0 transition duration-300">
-                    <!-- 👇👇 YAHAN APNE SCHOOL KI PHOTO KA LINK DAALNA HAI 👇👇 -->
-                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                         alt="Sir Newton Public School Barahat Building" 
-                         class="w-full h-72 md:h-96 object-cover rounded-2xl">
+                <div class="bg-white/10 backdrop-blur-md p-3 rounded-3xl border border-white/20 shadow-2xl transform md:rotate-1 hover:rotate-0 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Sir Newton Public School Barahat Grand Building" 
+                         class="w-full h-72 md:h-96 object-cover rounded-2xl shadow-lg">
                     
-                    <div class="p-4 bg-gradient-to-r from-blue-50 to-sky-50 rounded-xl mt-3 flex items-center justify-between">
+                    <div class="p-4 bg-blue-900/80 backdrop-blur-md rounded-xl mt-3 flex items-center justify-between border border-blue-700">
                         <div>
-                            <h4 class="font-extrabold text-blue-900 text-lg">Sir Newton Public School Campus</h4>
-                            <p class="text-xs text-slate-600 font-semibold"><i class="fas fa-map-marker-alt text-orange-500 mr-1"></i> Barahat, Banka (813103)</p>
+                            <h4 class="font-extrabold text-white text-lg">Sir Newton Public School Campus</h4>
+                            <p class="text-xs text-blue-200 font-semibold"><i class="fas fa-map-marker-alt text-orange-400 mr-1"></i> Barahat, Banka (813103)</p>
                         </div>
-                        <span class="bg-green-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">Nursery - 6th</span>
+                        <span class="bg-yellow-400 text-slate-950 text-xs font-extrabold px-3 py-1.5 rounded-full shadow">Nursery - 6th</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. BRIGHT PRINCIPAL'S MESSAGE SECTION (PAPA KI PHOTO KE SATH) -->
+    <!-- 4. PRINCIPAL'S MESSAGE SECTION (WITH PRINCIPAL & STUDENT PHOTO) -->
     <section id="about" class="py-16 px-4 max-w-7xl mx-auto">
         <div class="bg-gradient-to-r from-amber-50 via-white to-sky-50 border-2 border-blue-200 rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden">
             <div class="grid md:grid-cols-3 gap-10 items-center">
                 
-                <!-- PAPA (PRINCIPAL) PHOTO BOX -->
+                <!-- PRINCIPAL & STUDENT PHOTO BOX -->
                 <div class="text-center space-y-4">
-                    <div class="relative w-48 h-48 md:w-56 md:h-56 mx-auto rounded-3xl p-2 bg-gradient-to-tr from-blue-600 via-sky-400 to-amber-400 shadow-2xl">
-                        <!-- 👇👇 YAHAN PAPA KI PHOTO KA LINK DAALNA HAI 👇👇 -->
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                             alt="Principal Alok Kumar Singh" 
+                    <div class="relative w-56 h-56 md:w-64 md:h-64 mx-auto rounded-3xl p-2 bg-gradient-to-tr from-blue-600 via-sky-400 to-amber-400 shadow-2xl">
+                        <img src="1000701441.png" 
+                             alt="Principal Alok Kumar Singh with Student" 
                              class="w-full h-full object-cover rounded-2xl bg-white">
                         
                         <span class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-blue-700 text-white text-xs font-bold px-4 py-1 rounded-full shadow-md whitespace-nowrap">
