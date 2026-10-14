@@ -14,7 +14,7 @@
     <style>
         body { 
             font-family: 'Poppins', sans-serif;
-            background-color: #0f172a;
+            background-color: #090d16;
         }
 
         /* FIXED FULL-SCREEN NIGHT BUILDING BACKGROUND */
@@ -34,7 +34,7 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
-            filter: brightness(0.85) contrast(1.1);
+            filter: brightness(0.9) contrast(1.1);
         }
 
         @keyframes marquee {
@@ -52,13 +52,11 @@
 
     <!-- ======================================================= -->
     <!-- 100% VISIBLE FULL-SCREEN NIGHT LIGHT BUILDING BACKGROUND -->
-    <!-- (NO WHITE OVERLAY HIDING IT ANYMORE!)                   -->
     <!-- ======================================================= -->
     <div id="bg-Wrapper">
         <img id="mainBgImg" 
-             src="/file_00000000d3c820ca4b4b1424bd49615.png" 
-             alt="Sir Newton Public School Night View Background">
-        <!-- Very light dark tint only so lights glow brightly -->
+             src="file_00000000bdb08208b4ce547aa5e2b4c6.png" 
+             alt="Sir Newton Public School Background">
         <div class="absolute inset-0 bg-slate-950/35"></div>
     </div>
 
@@ -101,15 +99,15 @@
     </nav>
 
     <!-- ======================================================= -->
-    <!-- CLEAR WINDOW VIEW OF NIGHT BUILDING ON MOBILE TOP       -->
+    <!-- CLEAR TOP SHOWCASE OF NIGHT LIGHTS SCHOOL BUILDING      -->
     <!-- ======================================================= -->
-    <div class="max-w-7xl mx-auto px-4 pt-6">
-        <div class="relative rounded-3xl overflow-hidden border-2 border-amber-400 shadow-2xl">
+    <div class="max-w-7xl mx-auto px-4 pt-6 relative z-10">
+        <div class="relative rounded-3xl overflow-hidden border-2 border-amber-400 shadow-2xl bg-slate-900">
             <img id="heroBannerBuilding"
-                 src="/file_00000000d3c820ca4b4b1424bd49615.png" 
+                 src="file_00000000bdb08208b4ce547aa5e2b4c6.png" 
                  alt="Sir Newton Public School Grand Illuminated Building" 
                  class="w-full h-64 sm:h-80 md:h-96 object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent flex flex-col justify-end p-6">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-transparent flex flex-col justify-end p-6">
                 <span class="bg-amber-400 text-slate-950 font-extrabold text-xs px-3 py-1 rounded-full w-fit uppercase tracking-wider shadow mb-2">
                     ✨ Grand Campus of Barahat, Banka
                 </span>
@@ -123,7 +121,7 @@
         </div>
     </div>
 
-    <!-- 3. HERO SECTION (TRANSPARENT GLASS SO BACKGROUND SHINES THROUGH) -->
+    <!-- 3. HERO SECTION -->
     <section id="home" class="py-10 md:py-16 px-4 relative z-10">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
             <div class="space-y-6 bg-slate-900/75 backdrop-blur-md p-6 md:p-8 rounded-3xl border-2 border-amber-400/50 shadow-2xl text-white">
@@ -172,7 +170,7 @@
             <div class="space-y-4">
                 <div class="bg-slate-900/80 backdrop-blur-md p-3 rounded-3xl border-2 border-sky-400 shadow-2xl">
                     <img id="dayBuildingImg"
-                         src="/file_00000000bdb08208b4ce547aa5e2b4c6.png" 
+                         src="file_00000000bdb08208b4ce547aa5e2b4c6.png" 
                          alt="Sir Newton Public School Main Building Day View" 
                          class="w-full h-64 md:h-80 object-cover rounded-2xl shadow-md">
                     
@@ -188,9 +186,9 @@
         </div>
     </section>
 
-    <!-- 4. ABOUT OUR SCHOOL SECTION (WITH PROFESSIONAL IMAGES) -->
+    <!-- 4. ABOUT OUR SCHOOL SECTION -->
     <section id="about-school" class="py-12 px-4 max-w-7xl mx-auto relative z-10">
-        <div class="bg-white/90 backdrop-blur-md border-2 border-blue-300 rounded-3xl p-6 md:p-12 shadow-2xl">
+        <div class="bg-white/95 backdrop-blur-md border-2 border-blue-300 rounded-3xl p-6 md:p-12 shadow-2xl">
             <div class="grid md:grid-cols-2 gap-10 items-center">
                 <div class="space-y-4">
                     <span class="bg-orange-100 text-orange-700 font-extrabold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider">🏫 About Our Institution</span>
@@ -229,7 +227,7 @@
                 <div class="text-center space-y-4">
                     <div class="relative w-60 h-64 md:w-64 md:h-72 mx-auto rounded-3xl p-2 bg-gradient-to-tr from-blue-700 via-sky-400 to-amber-400 shadow-2xl">
                         <img id="principalImg"
-                             src="/file_00000000c6c081f882d0b0d07f0f38c7.png" 
+                             src="file_00000000c6c081f882d0b0d07f0f38c7.png" 
                              alt="Principal Mr. Alok Kumar Singh" 
                              class="w-full h-full object-cover object-top rounded-2xl bg-white">
                         
@@ -693,31 +691,57 @@
         <p class="text-xs text-slate-500 mt-3">© 2026 Sir Newton Public School. All Rights Reserved.</p>
     </footer>
 
-    <!-- MULTI-FALLBACK IMAGE LOADER + GMAIL SCRIPT -->
+    <!-- ========================================================================= -->
+    <!-- SMART AUTO-DISCOVERY IMAGE ENGINE (FINDS EXACT NIGHT PHOTO AUTOMATICALLY) -->
+    <!-- ========================================================================= -->
     <script>
-        // Smart multi-path image loader so photos NEVER fail
-        function setupImageFallbacks(imgId, fileName) {
-            const img = document.getElementById(imgId);
-            if (!img) return;
-            const paths = [
-                '/' + fileName,
-                './' + fileName,
-                fileName,
-                'https://raw.githubusercontent.com/sahil8292230521-creator/Sir-newton-public-school/main/' + fileName
-            ];
-            let attempt = 0;
-            img.onerror = function() {
-                attempt++;
-                if (attempt < paths.length) {
-                    img.src = paths[attempt];
-                }
-            };
-        }
+        (function autoLoadNightBuilding() {
+            const bgImg = document.getElementById('mainBgImg');
+            const bannerImg = document.getElementById('heroBannerBuilding');
+            const basePrefix = 'file_00000000d3c820ca4b4b1424bd49615';
+            const hexChars = ['', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
 
-        setupImageFallbacks('mainBgImg', 'file_00000000d3c820ca4b4b1424bd49615.png');
-        setupImageFallbacks('heroBannerBuilding', 'file_00000000d3c820ca4b4b1424bd49615.png');
-        setupImageFallbacks('dayBuildingImg', 'file_00000000bdb08208b4ce547aa5e2b4c6.png');
-        setupImageFallbacks('principalImg', 'file_00000000c6c081f882d0b0d07f0f38c7.png');
+            // 1. Try probing all 17 possible hex completions on Vercel + GitHub Raw
+            hexChars.forEach(function(ch) {
+                const candidateFile = basePrefix + ch + '.png';
+                const rawUrl = 'https://raw.githubusercontent.com/sahil8292230521-creator/Sir-newton-public-school/main/' + candidateFile;
+                
+                const probeLocal = new Image();
+                probeLocal.onload = function() {
+                    bgImg.src = candidateFile;
+                    bannerImg.src = candidateFile;
+                };
+                probeLocal.src = candidateFile;
+
+                const probeRaw = new Image();
+                probeRaw.onload = function() {
+                    bgImg.src = rawUrl;
+                    bannerImg.src = rawUrl;
+                };
+                probeRaw.src = rawUrl;
+            });
+
+            // 2. Also query GitHub API directly to fetch the exact filename in repository
+            fetch('https://api.github.com/repos/sahil8292230521-creator/Sir-newton-public-school/contents/')
+                .then(function(res) { return res.json(); })
+                .then(function(files) {
+                    if (!Array.isArray(files)) return;
+                    files.forEach(function(file) {
+                        if (file.name && file.name.indexOf('file_00000000d3c') === 0) {
+                            const exactUrl = file.download_url || file.name;
+                            bgImg.src = exactUrl;
+                            bannerImg.src = exactUrl;
+                        }
+                        if (file.name && file.name.indexOf('file_00000000bdb0') === 0) {
+                            document.getElementById('dayBuildingImg').src = file.download_url || file.name;
+                        }
+                        if (file.name && file.name.indexOf('file_00000000c6c0') === 0) {
+                            document.getElementById('principalImg').src = file.download_url || file.name;
+                        }
+                    });
+                })
+                .catch(function() {});
+        })();
 
         function sendToGmail(e) {
             e.preventDefault();
